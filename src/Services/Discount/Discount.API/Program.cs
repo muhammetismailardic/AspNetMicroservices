@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MigrateDatabase<Program>();
+//app.MigrateDatabase<Program>();
 
 app.Run();
