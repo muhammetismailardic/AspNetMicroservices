@@ -25,10 +25,18 @@ namespace Ordering.Infrastructure.Persistence
                     case EntityState.Added:
                         entry.Entity.CreatedDate = DateTime.Now;
                         entry.Entity.CreatedBy = "swn";
+
+                        //Silinmesi lazım bu böyle olmaz
+                        entry.Entity.LastModifiedDate = DateTime.Now;
+                        entry.Entity.LastModifiedBy = "swn";
                         break;
                     case EntityState.Modified:
                         entry.Entity.LastModifiedDate = DateTime.Now;
                         entry.Entity.LastModifiedBy = "swn";
+
+                        //Silinmesi lazım bu böyle olmaz
+                        entry.Entity.CreatedDate = DateTime.Now;
+                        entry.Entity.CreatedBy = "swn";
                         break;
                 }
             }
